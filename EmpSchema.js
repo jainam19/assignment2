@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-let EmpSchema = Schema([{
+let EmpSchema = Schema({
     name:{
         type:String,
         default:'somename'
@@ -24,7 +24,7 @@ let EmpSchema = Schema([{
     address: String,
     salary: Number,
 
-}])
+})
 
 const Employee = mongoose.model('Employee', EmpSchema);
 module.exports = Employee;

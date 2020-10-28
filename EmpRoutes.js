@@ -9,6 +9,8 @@ router.post('/emp1', (req, res)=>{
     let emp1 = Employee(req.body)
     emp1.save().then(()=>{
         res.status(202).send();
+    }).catch(err=>{
+        console.log(err);
     })
 })
 
